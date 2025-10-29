@@ -12,6 +12,8 @@ yarn dev
 pnpm dev
 # or
 bun dev
+
+https://script.google.com/macros/s/AKfycbwmec1nAFUqT2OPprqCx3YQZvnN_6Qv9feBbaDLHDzpl5Ldf7_p-NnyfaQCTyhFYuzA/exec
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
