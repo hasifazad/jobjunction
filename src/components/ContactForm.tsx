@@ -4,6 +4,9 @@ import { Locate } from 'lucide-react';
 import { useState } from 'react';
 
 
+// https://script.google.com/macros/s/AKfycbzdOvQz_3S36dIrSwI1muUU5CvIMrdDV3TKLbK8pGwzk5bfPlutZL3SBwm8yKAq3FEl/exec
+
+
 export default function ContactForm() {
     const [formData, setFormData] = useState({
         name: '',
@@ -23,7 +26,7 @@ export default function ContactForm() {
 
     const handleSubmit = async (e:any) => {
         e.preventDefault();
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbwLrfCLfeAgpaOAifsUgPWbeBkktiSjl-Mi2WPsQ-1dXW-pCZVJpyfoTbisDS5gAhif/exec'
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzdOvQz_3S36dIrSwI1muUU5CvIMrdDV3TKLbK8pGwzk5bfPlutZL3SBwm8yKAq3FEl/exec'
         try {
             const res = await fetch(scriptURL, {
                 method: "POST",
@@ -62,7 +65,7 @@ export default function ContactForm() {
                 {/* Contact Grid */}
                 <div className="grid lg:grid-cols-2 gap-12 items-start">
                     {/* Left Side - Contact Form */}
-                    <form className="bg-yellow-50 p-8 lg:p-12 shadow" method='POST' action='https://script.google.com/macros/s/AKfycbzdOvQz_3S36dIrSwI1muUU5CvIMrdDV3TKLbK8pGwzk5bfPlutZL3SBwm8yKAq3FEl/exec'>
+                    <form className="bg-yellow-50 p-8 lg:p-12 shadow" method='POST' action=''>
 
                         <div className="space-y-6">
                             <div className='space-y-6 lg:flex lg:space-y-0 justify-between'>
@@ -138,8 +141,8 @@ export default function ContactForm() {
 
                             {/* Submit Button */}
                             <button
-                                // onClick={handleSubmit}
-                                type='submit'
+                                onClick={handleSubmit}
+                                // type='submit'
                                 className="w-full bg-[var(--primary-yellow)] text-gray-900 font-bold py-4 px-8 rounded-lg hover:bg-yellow-500 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
                             >
                                 Send Message
