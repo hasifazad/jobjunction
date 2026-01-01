@@ -26,7 +26,7 @@ export default function ContactForm() {
 
     const handleSubmit = async (e:any) => {
         e.preventDefault();
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbzdOvQz_3S36dIrSwI1muUU5CvIMrdDV3TKLbK8pGwzk5bfPlutZL3SBwm8yKAq3FEl/exec'
+        const scriptURL = '/api/contact'
         try {
             const res = await fetch(scriptURL, {
                 method: "POST",
