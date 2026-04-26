@@ -1,51 +1,49 @@
-"use client";
 import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import Link from "next/link";
 
 interface Blog {
+    slug: string;
     topic: string;
-    ["image_url"]: string;
+    image_url: string;
     content: string;
 }
 
-export default function BlogPage() {
-    const { slug } = useParams<{ slug: string }>();
-    const [blog, setBlog] = useState<Blog | null>(null);
-    const [loading, setLoading] = useState(true);
+let FALLBACK_IMAGE = '/no-image.png'
 
-    console.log('===>', slug);
+async function getBlog(slug: string): Promise<Blog | null> {
+    let API_URL = process.env.API_URL
 
-
-    useEffect(() => {
-        async function fetchBlogs(): Promise<void> {
-            try {
-                const res = await fetch(
-                    "/api/blogs"
-                );
-                const data: Blog[] = await res.json();
-                console.log(data);
-
-
-                const found = data.find((b:any) => b?.id == slug);
-                console.log(found);
-
-                setBlog(found || null);
-            } catch (err) {
-                console.error("Error fetching blog:", err);
-            } finally {
-                setLoading(false);
+    try {
+        const res = await fetch(
+            `${API_URL}/blogs?slug=${slug}`,
+            {
+                next: { revalidate: 300 }, // ISR (5 minutes)
             }
-        }
-        fetchBlogs();
-    }, [slug]);
+        );
 
-    if (loading) return (
-        <div className="flex items-center justify-center h-96 bg-white">
-            <div className="w-12 h-12 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
-        </div>
-    );
-    if (!blog) return <p className="text-center mt-10">Blog not found.</p>;
+        if (!res.ok) return null;
+
+        return res.json();
+    } catch {
+        return null;
+    }
+}
+
+export default async function BlogPage({
+    params,
+}: {
+    params: { slug: string };
+}) {
+    const blog = await getBlog(params.slug);
+
+    if (!blog) {
+        return <p className="text-center mt-10">Blog not found.</p>;
+    }
+
+
+
+
 
     return (
         <div className="max-w-3xl mx-auto p-6">
@@ -54,7 +52,7 @@ export default function BlogPage() {
             </Link>
 
             <img
-                src={blog["image_url"]}
+                src={blog["image_url"] || FALLBACK_IMAGE}
                 alt={blog.topic}
                 className="w-full h-64 object-cover rounded-xl mb-6"
             />

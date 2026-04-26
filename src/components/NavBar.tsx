@@ -42,12 +42,12 @@ export default function Navbar() {
                         <Link href="/blogs" className="text-black hover:text-[var(--primary-yellow)]">
                             Blogs
                         </Link>
-                        <Link href="/contact" className="text-black hover:text-[var(--primary-yellow)]">
+                        <Link href="/#contact" className="text-black hover:text-[var(--primary-yellow)]">
                             Contact
                         </Link>
-                        <button className="rounded-xl bg-[var(--primary-yellow)] px-5 py-2 w-full cursor-pointer hover:bg-amber-400">
+                        {/* <button className="rounded-xl bg-[var(--primary-yellow)] px-5 py-2 w-full cursor-pointer hover:bg-amber-400">
                             Enroll Now
-                        </button>
+                        </button> */}
                     </div>
 
                     {/* Mobile Menu Button */}
@@ -79,13 +79,13 @@ export default function Navbar() {
                             About
                         </Link>
                         <Link
-                            href="/courses"
+                            href="#courses"
                             className="block hover:text-[var(--primary-yellow)]"
                             onClick={() => setIsOpen(false)}
                         >
                             Courses
                         </Link>
-                        <Link href="/courses" className="text-black hover:text-[var(--primary-yellow)]">
+                        <Link href="/blogs" className="text-black hover:text-[var(--primary-yellow)]">
                             Blogs
                         </Link>
                         <Link

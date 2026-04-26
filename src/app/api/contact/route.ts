@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 
 export async function POST(req: Request) {
+    let GOOGLE_SHEET_URL = process.env.GOOGLE_SHEET_URL
+
     const data = await req.json();
 
     const formBody = new URLSearchParams();
@@ -10,7 +12,7 @@ export async function POST(req: Request) {
     formBody.append("message", data.message);
 
 
-    await fetch('https://script.google.com/macros/s/AKfycbzdOvQz_3S36dIrSwI1muUU5CvIMrdDV3TKLbK8pGwzk5bfPlutZL3SBwm8yKAq3FEl/exec', {
+    await fetch(GOOGLE_SHEET_URL, {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded", },
 

@@ -1,6 +1,5 @@
 import ContactForm from "@/components/ContactForm";
 
-import Footer from "@/components/Footer";
 import Image from "next/image";
 
 export default function Home() {
@@ -116,7 +115,7 @@ export default function Home() {
 
 
       <ContactForm />
-      <Footer />
+     
 
     </div>
 

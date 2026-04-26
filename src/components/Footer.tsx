@@ -132,7 +132,7 @@ export default function Footer() {
                 {/* Footer Bottom */}
                 <div className="pt-8 border-t border-gray-800">
                     <p className="text-center  text-sm">
-                        &copy; 2025 Job Junction. All Rights Reserved. | Designed with{' '}
+                        &copy; {new Date().getFullYear()} Job Junction. All Rights Reserved. | Designed with{' '}
                         <span className="text-red-500 animate-pulse">❤️</span> for your success
                     </p>
                 </div>
