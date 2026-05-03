@@ -42,8 +42,8 @@ export default function Navbar() {
                         <Link href="/blogs" className="text-black hover:text-[var(--primary-yellow)]">
                             Blogs
                         </Link>
-                        <Link href="/#contact" className="text-black hover:text-[var(--primary-yellow)]">
-                            Contact
+                        <Link href="/courses" className="text-black hover:text-[var(--primary-yellow)]">
+                            Courses
                         </Link>
                         {/* <button className="rounded-xl bg-[var(--primary-yellow)] px-5 py-2 w-full cursor-pointer hover:bg-amber-400">
                             Enroll Now

@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Job Junction",
-  description: "Best IT training institution in Kerala",
+  description: "Best IT training institution in Trivandrum",
 };
 
 export default function RootLayout({
@@ -30,7 +30,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Infobar />
+        {/* <Infobar /> */}
         <Navbar />
         {children}
 

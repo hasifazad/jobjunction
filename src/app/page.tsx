@@ -2,6 +2,9 @@ import ContactForm from "@/components/ContactForm";
 
 import Image from "next/image";
 
+import { EnquiryButton } from "@/components/EnquiryModal";
+import HeroCarousel from "@/components/HeroCarousel";
+
 export default function Home() {
   return (
 
@@ -9,26 +12,28 @@ export default function Home() {
 
       <main className="flex items-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <div className="flex flex-col-reverse md:flex-row md:justify-between py-16 md:py-24 gap-20">
+          <div className="flex flex-col md:flex-row md:justify-between py-16 md:py-24 gap-10">
 
             {/* Left Section: Text */}
-            <div className="flex-1 text-center md:text-left">
-              <h1 className="text-4xl md:text-6xl text-black mb-4">
-                Build Your Future with Job Junction
+            <div className="flex-1 py-5 text-center md:text-left">
+              <h1 className="text-6xl md:text-6xl text-black mb-4 leading-snug">
+                The Ultimate Learning Experience
               </h1>
-              <p className="text-black mb-6 text-lg md:text-xl">
-                No online distractions <br /> Just real classrooms, Real teachers, and Real learning.
+              <p className="text-black mb-6 text-xl md:text-xl">
+                Build Your Future With JobJunction
+                {/* No online distractions <br /> Just real classrooms, Real teachers, and Real learning. */}
               </p>
               <div className="flex justify-center md:justify-start gap-4">
-                <a
+                {/* <a
                   href="#courses"
                   className="border border-black px-6 py-3 bg-black  text-white rounded-lg transition"
                 >
-                  Get Started
-                </a>
+                  Enquire Now
+                </a> */}
+                <EnquiryButton />
                 <a
                   href="#about"
-                  className="px-6 py-3 border border-black text-black rounded-lg transition"
+                  className="p-4 px-5 border text-md border-black text-black rounded-lg transition"
                 >
                   Contact
                 </a>
@@ -36,7 +41,7 @@ export default function Home() {
             </div>
 
             {/* Right Section: Hero Image */}
-            <div className="flex-1 shadow-2xl">
+            {/* <div className="flex-1 shadow-2xl">
               <Image
                 className="w-full"
                 src="/hero.jpg"
@@ -45,6 +50,10 @@ export default function Home() {
                 height={38}
                 priority
               />
+            </div> */}
+
+            <div className="flex-1">
+              <HeroCarousel />
             </div>
 
           </div>
@@ -62,7 +71,7 @@ export default function Home() {
                 <span className="absolute bottom-2 left-0 w-full h-3 bg-yellow-400 -z-10"></span>
               </span>
             </h2>
-            
+
           </div>
 
           {/* Cards Grid */}
@@ -115,7 +124,7 @@ export default function Home() {
 
 
       <ContactForm />
-     
+
 
     </div>
 
