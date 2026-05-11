@@ -41,10 +41,6 @@ export default async function BlogPage({
         return <p className="text-center mt-10">Blog not found.</p>;
     }
 
-
-
-
-
     return (
         <div className="max-w-3xl mx-auto p-6">
             <Link href="/blogs" className="text-blue-600 hover:underline mb-4 inline-block">

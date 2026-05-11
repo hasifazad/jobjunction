@@ -85,21 +85,21 @@ export default function Footer() {
                         </h3>
                         <div className="flex flex-col space-y-3">
                             
-                            <a href="#courses" className="hover:text-[var(--primary-yellow)] hover:translate-x-1 transition-all duration-200">
+                            <a href="/courses" className="hover:text-[var(--primary-yellow)] hover:translate-x-1 transition-all duration-200">
                                 MERN Stack Development
                             </a>
-                            <a href="#courses" className="hover:text-[var(--primary-yellow)] hover:translate-x-1 transition-all duration-200">
+                            <a href="/courses" className="hover:text-[var(--primary-yellow)] hover:translate-x-1 transition-all duration-200">
                                 Python-Django Development
                             </a>
-                            <a href="#courses" className="hover:text-[var(--primary-yellow)] hover:translate-x-1 transition-all duration-200">
+                            <a href="/courses" className="hover:text-[var(--primary-yellow)] hover:translate-x-1 transition-all duration-200">
                                 NextJS Development
                             </a>
-                            <a href="#courses" className="hover:text-[var(--primary-yellow)] hover:translate-x-1 transition-all duration-200">
+                            {/* <a href="#courses" className="hover:text-[var(--primary-yellow)] hover:translate-x-1 transition-all duration-200">
                                 Building Information Modeling (BIM)
-                            </a>
-                            <a href="#courses" className="hover:text-[var(--primary-yellow)] hover:translate-x-1 transition-all duration-200">
+                            </a> */}
+                            {/* <a href="#courses" className="hover:text-[var(--primary-yellow)] hover:translate-x-1 transition-all duration-200">
                                 3D Printing
-                            </a>
+                            </a> */}
                         </div>
                     </div>
 

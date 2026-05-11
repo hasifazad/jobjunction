@@ -1,5 +1,6 @@
 
 import CourseCard from "./CourseCard";
+import Link from "next/link";
 
 // types/course.ts
 export interface Course {
@@ -56,7 +57,9 @@ export default function CourseSection({ title, courses }: Props) {
 
             <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 {courses.map((course) => (
-                    <CourseCard key={course.id} course={course} />
+                    <Link href={`/courses/${course?.slug}`}>
+                        <CourseCard key={course.id} course={course} />
+                    </Link>
                 ))}
             </div>
         </section>

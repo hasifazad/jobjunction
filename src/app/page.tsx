@@ -12,33 +12,11 @@ export default function Home() {
 
       <main className="flex items-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <div className="flex flex-col md:flex-row md:justify-between py-16 md:py-24 gap-10">
+          <div className="flex flex-col md:flex-row md:justify-between py-5 md:py-6 gap-10">
 
             {/* Left Section: Text */}
-            <div className="flex-1 py-5 text-center md:text-left">
-              <h1 className="text-6xl md:text-6xl text-black mb-4 leading-snug">
-                The Ultimate Learning Experience
-              </h1>
-              <p className="text-black mb-6 text-xl md:text-xl">
-                Build Your Future With JobJunction
-                {/* No online distractions <br /> Just real classrooms, Real teachers, and Real learning. */}
-              </p>
-              <div className="flex justify-center md:justify-start gap-4">
-                {/* <a
-                  href="#courses"
-                  className="border border-black px-6 py-3 bg-black  text-white rounded-lg transition"
-                >
-                  Enquire Now
-                </a> */}
-                <EnquiryButton />
-                <a
-                  href="#about"
-                  className="p-4 px-5 border text-md border-black text-black rounded-lg transition"
-                >
-                  Contact
-                </a>
-              </div>
-            </div>
+            
+           
 
             {/* Right Section: Hero Image */}
             {/* <div className="flex-1 shadow-2xl">

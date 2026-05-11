@@ -18,7 +18,7 @@ interface Props {
 
 export default function CourseCard({ course }: Props) {
     return (
-        <div className="bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden group">
+        <div className="bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden group cursor-pointer">
 
             <div className="h-48 overflow-hidden">
                 <Image

@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "title": "Full Stack Development",
+        "slug": "full-stack-development",
+        "description": "Learn MERN stack from scratch",
+        "duration": "12 Weeks",
+        "price": "₹4999"
+    },
+    {
+        "id": 2,
+        "title": "Python for Beginners",
+        "slug": "python-for-beginners",
+        "description": "Complete Python basics",
+        "duration": "8 Weeks",
+        "price": "₹2999"
+    }
+]

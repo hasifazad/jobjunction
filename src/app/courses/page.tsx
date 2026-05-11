@@ -7,6 +7,7 @@ export interface Course {
     level: "Beginner" | "Intermediate" | "Advanced";
     image: string;
     category: string;
+    slug: string;
 }
 
 export const courses: Course[] = [
@@ -18,6 +19,7 @@ export const courses: Course[] = [
         level: "Intermediate",
         image: "/mernstack.jpg",
         category: "Web Development",
+        slug: "mern-stack-development"
     },
     {
         id: "2",
@@ -27,6 +29,7 @@ export const courses: Course[] = [
         level: "Advanced",
         image: "/nextjs.png",
         category: "Frontend",
+        slug: "nextjs-development"
     },
     {
         id: "3",
@@ -36,9 +39,11 @@ export const courses: Course[] = [
         level: "Beginner",
         image: "/python-django.png",
         category: "Backend",
+        slug: "python-full-stack-development"
     },
 ];
 import CourseSection from "@/components/CourseSection";
+import Link from "next/link";
 
 export default async function CoursesPage() {
     // SSR ready (you can replace with DB/API later)
@@ -47,7 +52,9 @@ export default async function CoursesPage() {
     const categories = [...new Set(allCourses.map(c => c.category))];
 
     return (
-        <main className="px-6 md:px-12 lg:px-20 py-10 bg-[var(--background)] min-h-screen">
+        <main className="px-6 md:px-12 lg:px-36 py-10 bg-[var(--background)]">
+
+            View Details
 
             {/* Hero Section */}
             <div className="mb-12">
@@ -58,14 +65,15 @@ export default async function CoursesPage() {
                     Upgrade your skills with industry-relevant IT courses designed for real-world success.
                 </p>
             </div>
-
             {/* Dynamic Sections */}
             {categories.map((category) => (
-                <CourseSection
-                    key={category}
-                    title={category}
-                    courses={allCourses.filter(c => c)}
-                />
+                
+                    <CourseSection
+                        key={category}
+                        title={category}
+                        courses={allCourses.filter(c => c)}
+                    />
+                
             ))}
         </main>
     );
