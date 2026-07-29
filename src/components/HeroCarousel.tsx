@@ -9,15 +9,15 @@ import Link from "next/link";
 
 const slides = [
     {
-        image: "/oluwaseyi-akinlolu-dPQBwZ6d-NU-unsplash-Photoroom.png",
+        image: "/hero_img_1.png",
         text: "Learn by building real-world projects",
     },
     {
-        image: "/elyas-pasban-LYMhzc90SxA-unsplash-Photoroom.png",
+        image: "/hero_img_2.png",
         text: "Guided by industry experts",
     },
     {
-        image: "/bangun-stock-production-3g9VyuI2sd0-unsplash-Photoroom.png",
+        image: "/hero_img_3.png",
         text: "Transform your career with us",
     },
 ];
@@ -88,7 +88,7 @@ export default function HeroSection() {
                                         duration: 0.8,
                                         ease: "easeInOut",
                                     }}
-                                    className="text-4xl md:text-5xl lg:text-6xl font-black leading-[1.1] tracking-tight text-[#171717]"
+                                    className="font-medium text-4xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tight text-[#171717]"
                                 >
                                     {slides[index].text}
                                 </motion.h1>
@@ -215,8 +215,8 @@ export default function HeroSection() {
                                         <Image
                                             src={slides[index].image}
                                             alt="student"
-                                            width={420}
-                                            height={520}
+                                            width={300}
+                                            height={400}
                                             priority
                                             className="object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.2)]"
                                         />

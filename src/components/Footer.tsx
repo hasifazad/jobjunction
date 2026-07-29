@@ -60,19 +60,19 @@ export default function Footer() {
                             Quick Links
                         </h3>
                         <div className="flex flex-col space-y-3">
-                            <a href="#courses" className="hover:text-[var(--primary-yellow)] hover:translate-x-1 transition-all duration-200">
+                            <a href="/courses" className="hover:text-[var(--primary-yellow)] hover:translate-x-1 transition-all duration-200">
                                 Our Courses
                             </a>
-                            <a href="#blogs" className="hover:text-[var(--primary-yellow)] hover:translate-x-1 transition-all duration-200">
+                            <a href="/blogs" className="hover:text-[var(--primary-yellow)] hover:translate-x-1 transition-all duration-200">
                                 Blogs
                             </a>
-                            <a href="#faq" className="hover:text-[var(--primary-yellow)] hover:translate-x-1 transition-all duration-200">
+                            <a href="/faq" className="hover:text-[var(--primary-yellow)] hover:translate-x-1 transition-all duration-200">
                                 FAQ
                             </a>
-                            <a href="#contact" className="hover:text-[var(--primary-yellow)] hover:translate-x-1 transition-all duration-200">
+                            <a href="/#contact" className="hover:text-[var(--primary-yellow)] hover:translate-x-1 transition-all duration-200">
                                 Contact Us
                             </a>
-                            <a href="#home" className="hover:text-[var(--primary-yellow)] hover:translate-x-1 transition-all duration-200">
+                            <a href="/about" className="hover:text-[var(--primary-yellow)] hover:translate-x-1 transition-all duration-200">
                                 About Us
                             </a>
                         </div>
@@ -84,7 +84,7 @@ export default function Footer() {
                             Courses
                         </h3>
                         <div className="flex flex-col space-y-3">
-                            
+
                             <a href="/courses" className="hover:text-[var(--primary-yellow)] hover:translate-x-1 transition-all duration-200">
                                 MERN Stack Development
                             </a>
@@ -92,14 +92,17 @@ export default function Footer() {
                                 Python-Django Development
                             </a>
                             <a href="/courses" className="hover:text-[var(--primary-yellow)] hover:translate-x-1 transition-all duration-200">
-                                NextJS Development
+                                NextJS Web Development
                             </a>
-                            {/* <a href="#courses" className="hover:text-[var(--primary-yellow)] hover:translate-x-1 transition-all duration-200">
-                                Building Information Modeling (BIM)
-                            </a> */}
-                            {/* <a href="#courses" className="hover:text-[var(--primary-yellow)] hover:translate-x-1 transition-all duration-200">
-                                3D Printing
-                            </a> */}
+                            <a href="#courses" className="hover:text-[var(--primary-yellow)] hover:translate-x-1 transition-all duration-200">
+                                .NET-Angular Development
+                            </a>
+                            <a href="#courses" className="hover:text-[var(--primary-yellow)] hover:translate-x-1 transition-all duration-200">
+                                ReactJS Web Development
+                            </a>
+                            <a href="#courses" className="hover:text-[var(--primary-yellow)] hover:translate-x-1 transition-all duration-200">
+                                Angular Web Development
+                            </a>
                         </div>
                     </div>
 
@@ -119,7 +122,7 @@ export default function Footer() {
                             </p>
                             <p className="flex items-start gap-2">
                                 <span className="text-xl"><MapPin size={20} /></span>
-                                <span>Kabani Building,<br />Technocity Campus,<br />Technopark Phase 4,<br />Mangalapuram PO, Thonnakkal, EDAKKODE, Kerala 695317</span>
+                                <span>Mar Ivanios Vidya Nagar, <br />Nalanchira P.O, <br />Thiruvananthapuram, <br />Kerala, 695015</span>
                             </p>
                             <p className="flex items-start gap-2">
                                 <span className="text-xl"> <Timer size={20} /> </span>

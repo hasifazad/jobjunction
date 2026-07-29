@@ -1,18 +1,797 @@
 [
     {
-        "id": 1,
-        "title": "Full Stack Development",
-        "slug": "full-stack-development",
-        "description": "Learn MERN stack from scratch",
-        "duration": "12 Weeks",
-        "price": "₹4999"
+        "id": "1",
+        "title": "MERN Stack Development with AI",
+        "description": "Learn full-stack web development using MongoDB, Express.js, React, Node.js, and modern AI tools.",
+        "duration": "6 Months",
+        "level": "Intermediate",
+        "image": "/mernstack.jpg",
+        "category": "Web Development",
+        "slug": "mern-stack-with-ai",
+        "whatYouWillLearn": [
+            {
+                "heading": "Frontend Development with React",
+                "detail": "Build modern and responsive user interfaces using React.js and component-based architecture."
+            },
+            {
+                "heading": "Backend APIs with Node.js",
+                "detail": "Create scalable REST APIs using Express.js and Node.js."
+            },
+            {
+                "heading": "MongoDB Database Integration",
+                "detail": "Work with MongoDB, Mongoose, and database relationships."
+            },
+            {
+                "heading": "Authentication & Security",
+                "detail": "Implement JWT authentication, protected routes, and secure APIs."
+            },
+            {
+                "heading": "AI Integration in Web Apps",
+                "detail": "Integrate AI tools and APIs such as OpenAI into MERN applications."
+            },
+            {
+                "heading": "Deployment & Production",
+                "detail": "Deploy frontend and backend applications using Vercel, Render, and cloud databases."
+            }
+        ],
+        "roadmap": [
+            {
+                "module": "Module 1",
+                "title": "Web Fundamentals",
+                "topics": [
+                    "HTML",
+                    "CSS",
+                    "Responsive Design",
+                    "JavaScript Basics"
+                ]
+            },
+            {
+                "module": "Module 2",
+                "title": "Advanced JavaScript",
+                "topics": [
+                    "ES6+",
+                    "DOM",
+                    "Async JavaScript",
+                    "Fetch API"
+                ]
+            },
+            {
+                "module": "Module 3",
+                "title": "React.js Development",
+                "topics": [
+                    "Components",
+                    "Hooks",
+                    "Routing",
+                    "State Management"
+                ]
+            },
+            {
+                "module": "Module 4",
+                "title": "Backend with Node.js",
+                "topics": [
+                    "Express.js",
+                    "REST APIs",
+                    "Middleware",
+                    "Authentication"
+                ]
+            },
+            {
+                "module": "Module 5",
+                "title": "MongoDB & Database Design",
+                "topics": [
+                    "CRUD",
+                    "Mongoose",
+                    "Schema Design",
+                    "Aggregation"
+                ]
+            },
+            {
+                "module": "Module 6",
+                "title": "AI & Deployment",
+                "topics": [
+                    "AI APIs",
+                    "Chatbot Integration",
+                    "Deployment",
+                    "GitHub"
+                ]
+            }
+        ]
     },
     {
-        "id": 2,
-        "title": "Python for Beginners",
-        "slug": "python-for-beginners",
-        "description": "Complete Python basics",
-        "duration": "8 Weeks",
-        "price": "₹2999"
+        "id": "2",
+        "title": "Python Django Development with AI",
+        "description": "Master Python, Django, backend development, and AI-powered web applications.",
+        "duration": "6 Months",
+        "level": "Intermediate",
+        "image": "/python-django.png",
+        "category": "Web Development",
+        "slug": "python-django-with-ai",
+        "whatYouWillLearn": [
+            {
+                "heading": "Python Programming Fundamentals",
+                "detail": "Learn Python syntax, OOP concepts, functions, and data structures."
+            },
+            {
+                "heading": "Web Development with Django",
+                "detail": "Build powerful backend applications using the Django framework."
+            },
+            {
+                "heading": "Database Management",
+                "detail": "Work with PostgreSQL and Django ORM for efficient data handling."
+            },
+            {
+                "heading": "Authentication System",
+                "detail": "Implement login, registration, permissions, and role-based access."
+            },
+            {
+                "heading": "AI Integration with Python",
+                "detail": "Use Python libraries and AI APIs to create intelligent applications."
+            },
+            {
+                "heading": "Deployment & Hosting",
+                "detail": "Deploy Django applications to cloud servers and production environments."
+            }
+        ],
+        "roadmap": [
+            {
+                "module": "Module 1",
+                "title": "Programming Basics",
+                "topics": [
+                    "Python Basics",
+                    "Variables",
+                    "Loops",
+                    "Functions"
+                ]
+            },
+            {
+                "module": "Module 2",
+                "title": "Advanced Python",
+                "topics": [
+                    "OOP",
+                    "File Handling",
+                    "Modules",
+                    "Exception Handling"
+                ]
+            },
+            {
+                "module": "Module 3",
+                "title": "Django Fundamentals",
+                "topics": [
+                    "Django Setup",
+                    "Apps",
+                    "Templates",
+                    "Static Files"
+                ]
+            },
+            {
+                "module": "Module 4",
+                "title": "Backend Development",
+                "topics": [
+                    "Models",
+                    "ORM",
+                    "Authentication",
+                    "REST APIs"
+                ]
+            },
+            {
+                "module": "Module 5",
+                "title": "Database & API Integration",
+                "topics": [
+                    "PostgreSQL",
+                    "CRUD",
+                    "API Development",
+                    "Third-party APIs"
+                ]
+            },
+            {
+                "module": "Module 6",
+                "title": "AI & Deployment",
+                "topics": [
+                    "OpenAI APIs",
+                    "Automation",
+                    "Deployment",
+                    "Production Setup"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "3",
+        "title": "Next.js Development with AI",
+        "description": "Build production-ready modern web applications using Next.js, TypeScript, and AI tools.",
+        "duration": "4 Months",
+        "level": "Advanced",
+        "image": "/nextjs.png",
+        "category": "Web Development",
+        "slug": "nextjs-with-ai",
+        "whatYouWillLearn": [
+            {
+                "heading": "Modern Frontend Development",
+                "detail": "Build fast and optimized applications using Next.js and React."
+            },
+            {
+                "heading": "Server Components & Rendering",
+                "detail": "Understand SSR, SSG, ISR, and React Server Components."
+            },
+            {
+                "heading": "TypeScript Integration",
+                "detail": "Write scalable and type-safe applications using TypeScript."
+            },
+            {
+                "heading": "Authentication & Database",
+                "detail": "Implement authentication systems and connect databases."
+            },
+            {
+                "heading": "AI Features in Applications",
+                "detail": "Integrate AI-powered chat, content generation, and automation features."
+            },
+            {
+                "heading": "Deployment & Optimization",
+                "detail": "Deploy applications with performance optimization and SEO best practices."
+            }
+        ],
+        "roadmap": [
+            {
+                "module": "Module 1",
+                "title": "Frontend Foundations",
+                "topics": [
+                    "HTML",
+                    "CSS",
+                    "JavaScript",
+                    "Responsive UI"
+                ]
+            },
+            {
+                "module": "Module 2",
+                "title": "React.js Essentials",
+                "topics": [
+                    "Components",
+                    "Hooks",
+                    "State",
+                    "API Handling"
+                ]
+            },
+            {
+                "module": "Module 3",
+                "title": "Next.js Core Concepts",
+                "topics": [
+                    "App Router",
+                    "Layouts",
+                    "Dynamic Routes",
+                    "Server Components"
+                ]
+            },
+            {
+                "module": "Module 4",
+                "title": "Backend & Database",
+                "topics": [
+                    "API Routes",
+                    "Authentication",
+                    "MongoDB",
+                    "Prisma"
+                ]
+            },
+            {
+                "module": "Module 5",
+                "title": "AI Integration",
+                "topics": [
+                    "OpenAI APIs",
+                    "AI Chatbots",
+                    "Content Generation",
+                    "Automation"
+                ]
+            },
+            {
+                "module": "Module 6",
+                "title": "Deployment & Production",
+                "topics": [
+                    "Vercel",
+                    "SEO",
+                    "Performance Optimization",
+                    "CI/CD"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "4",
+        "title": "Flutter",
+        "description": "Build beautiful, high-performance cross-platform mobile applications for Android and iOS using Flutter and Dart.",
+        "duration": "4 Months",
+        "level": "Advanced",
+        "image": "/flutter.jpg",
+        "category": "Mobile App Development",
+        "slug": "flutter-development",
+        "whatYouWillLearn": [
+            {
+                "heading": "Flutter Fundamentals",
+                "detail": "Learn Flutter architecture, widgets, layouts, and project structure."
+            },
+            {
+                "heading": "Dart Programming",
+                "detail": "Master Dart language features including OOP, asynchronous programming, and collections."
+            },
+            {
+                "heading": "State Management",
+                "detail": "Build scalable applications using Provider, Riverpod, or Bloc."
+            },
+            {
+                "heading": "REST APIs & Firebase",
+                "detail": "Connect mobile apps with REST APIs and Firebase services."
+            },
+            {
+                "heading": "Native Device Features",
+                "detail": "Access camera, location, notifications, storage, and device sensors."
+            },
+            {
+                "heading": "Publishing & Deployment",
+                "detail": "Prepare, optimize, and publish applications to Google Play Store and Apple App Store."
+            }
+        ],
+        "roadmap": [
+            {
+                "module": "Module 1",
+                "title": "Dart Programming",
+                "topics": [
+                    "Variables & Data Types",
+                    "Functions",
+                    "OOP",
+                    "Collections",
+                    "Async & Await"
+                ]
+            },
+            {
+                "module": "Module 2",
+                "title": "Flutter Fundamentals",
+                "topics": [
+                    "Widgets",
+                    "Layouts",
+                    "Navigation",
+                    "Forms",
+                    "Themes"
+                ]
+            },
+            {
+                "module": "Module 3",
+                "title": "State Management",
+                "topics": [
+                    "Provider",
+                    "Riverpod",
+                    "Bloc Basics",
+                    "App Architecture"
+                ]
+            },
+            {
+                "module": "Module 4",
+                "title": "Backend Integration",
+                "topics": [
+                    "REST API",
+                    "JSON",
+                    "Authentication",
+                    "Firebase",
+                    "Cloud Firestore"
+                ]
+            },
+            {
+                "module": "Module 5",
+                "title": "Native Features",
+                "topics": [
+                    "Camera",
+                    "Location",
+                    "Push Notifications",
+                    "Local Storage",
+                    "Device Permissions"
+                ]
+            },
+            {
+                "module": "Module 6",
+                "title": "Deployment",
+                "topics": [
+                    "App Optimization",
+                    "Testing",
+                    "Play Store Publishing",
+                    "App Store Publishing",
+                    "CI/CD"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "5",
+        "title": "React Native",
+        "description": "Develop cross-platform mobile applications for Android and iOS using React Native, TypeScript, and modern development tools.",
+        "duration": "4 Months",
+        "level": "Advanced",
+        "image": "/react-native.png",
+        "category": "Mobile App Development",
+        "slug": "react-native-development",
+        "whatYouWillLearn": [
+            {
+                "heading": "React Native Fundamentals",
+                "detail": "Build native mobile applications using React Native components and navigation."
+            },
+            {
+                "heading": "TypeScript Integration",
+                "detail": "Develop scalable and maintainable applications with TypeScript."
+            },
+            {
+                "heading": "State Management",
+                "detail": "Manage application state using Context API, Redux Toolkit, or Zustand."
+            },
+            {
+                "heading": "API & Firebase Integration",
+                "detail": "Consume REST APIs, authenticate users, and integrate Firebase services."
+            },
+            {
+                "heading": "Native Device Features",
+                "detail": "Work with camera, GPS, notifications, storage, biometric authentication, and permissions."
+            },
+            {
+                "heading": "App Publishing",
+                "detail": "Build production-ready applications and publish them to Google Play Store and Apple App Store."
+            }
+        ],
+        "roadmap": [
+            {
+                "module": "Module 1",
+                "title": "JavaScript & TypeScript",
+                "topics": [
+                    "ES6+",
+                    "TypeScript",
+                    "Modules",
+                    "Async Programming",
+                    "Project Setup"
+                ]
+            },
+            {
+                "module": "Module 2",
+                "title": "React Fundamentals",
+                "topics": [
+                    "Components",
+                    "Hooks",
+                    "State",
+                    "Props",
+                    "Context API"
+                ]
+            },
+            {
+                "module": "Module 3",
+                "title": "React Native Essentials",
+                "topics": [
+                    "Core Components",
+                    "Navigation",
+                    "Styling",
+                    "Lists",
+                    "Forms"
+                ]
+            },
+            {
+                "module": "Module 4",
+                "title": "Backend Integration",
+                "topics": [
+                    "REST APIs",
+                    "Axios",
+                    "Authentication",
+                    "Firebase",
+                    "Async Storage"
+                ]
+            },
+            {
+                "module": "Module 5",
+                "title": "Native APIs",
+                "topics": [
+                    "Camera",
+                    "Location",
+                    "Push Notifications",
+                    "Permissions",
+                    "Biometric Authentication"
+                ]
+            },
+            {
+                "module": "Module 6",
+                "title": "Testing & Deployment",
+                "topics": [
+                    "Performance Optimization",
+                    "Debugging",
+                    "Play Store Publishing",
+                    "App Store Publishing",
+                    "CI/CD"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "4",
+        "title": "No Code AI",
+        "description": "Build production-ready modern web applications using Next.js, TypeScript, and AI tools.",
+        "duration": "4 Months",
+        "level": "Advanced",
+        "image": "/no-code-ai.jfif",
+        "category": "AI Skill Development",
+        "slug": "nextjs-with-ai",
+        "whatYouWillLearn": [
+            {
+                "heading": "Modern Frontend Development",
+                "detail": "Build fast and optimized applications using Next.js and React."
+            },
+            {
+                "heading": "Server Components & Rendering",
+                "detail": "Understand SSR, SSG, ISR, and React Server Components."
+            },
+            {
+                "heading": "TypeScript Integration",
+                "detail": "Write scalable and type-safe applications using TypeScript."
+            },
+            {
+                "heading": "Authentication & Database",
+                "detail": "Implement authentication systems and connect databases."
+            },
+            {
+                "heading": "AI Features in Applications",
+                "detail": "Integrate AI-powered chat, content generation, and automation features."
+            },
+            {
+                "heading": "Deployment & Optimization",
+                "detail": "Deploy applications with performance optimization and SEO best practices."
+            }
+        ],
+        "roadmap": [
+            {
+                "module": "Module 1",
+                "title": "Frontend Foundations",
+                "topics": [
+                    "HTML",
+                    "CSS",
+                    "JavaScript",
+                    "Responsive UI"
+                ]
+            },
+            {
+                "module": "Module 2",
+                "title": "React.js Essentials",
+                "topics": [
+                    "Components",
+                    "Hooks",
+                    "State",
+                    "API Handling"
+                ]
+            },
+            {
+                "module": "Module 3",
+                "title": "Next.js Core Concepts",
+                "topics": [
+                    "App Router",
+                    "Layouts",
+                    "Dynamic Routes",
+                    "Server Components"
+                ]
+            },
+            {
+                "module": "Module 4",
+                "title": "Backend & Database",
+                "topics": [
+                    "API Routes",
+                    "Authentication",
+                    "MongoDB",
+                    "Prisma"
+                ]
+            },
+            {
+                "module": "Module 5",
+                "title": "AI Integration",
+                "topics": [
+                    "OpenAI APIs",
+                    "AI Chatbots",
+                    "Content Generation",
+                    "Automation"
+                ]
+            },
+            {
+                "module": "Module 6",
+                "title": "Deployment & Production",
+                "topics": [
+                    "Vercel",
+                    "SEO",
+                    "Performance Optimization",
+                    "CI/CD"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "4",
+        "title": "Low Code AI",
+        "description": "Build production-ready modern web applications using Next.js, TypeScript, and AI tools.",
+        "duration": "4 Months",
+        "level": "Advanced",
+        "image": "/low-code-ai.jfif",
+        "category": "AI Skill Development",
+        "slug": "nextjs-with-ai",
+        "whatYouWillLearn": [
+            {
+                "heading": "Modern Frontend Development",
+                "detail": "Build fast and optimized applications using Next.js and React."
+            },
+            {
+                "heading": "Server Components & Rendering",
+                "detail": "Understand SSR, SSG, ISR, and React Server Components."
+            },
+            {
+                "heading": "TypeScript Integration",
+                "detail": "Write scalable and type-safe applications using TypeScript."
+            },
+            {
+                "heading": "Authentication & Database",
+                "detail": "Implement authentication systems and connect databases."
+            },
+            {
+                "heading": "AI Features in Applications",
+                "detail": "Integrate AI-powered chat, content generation, and automation features."
+            },
+            {
+                "heading": "Deployment & Optimization",
+                "detail": "Deploy applications with performance optimization and SEO best practices."
+            }
+        ],
+        "roadmap": [
+            {
+                "module": "Module 1",
+                "title": "Frontend Foundations",
+                "topics": [
+                    "HTML",
+                    "CSS",
+                    "JavaScript",
+                    "Responsive UI"
+                ]
+            },
+            {
+                "module": "Module 2",
+                "title": "React.js Essentials",
+                "topics": [
+                    "Components",
+                    "Hooks",
+                    "State",
+                    "API Handling"
+                ]
+            },
+            {
+                "module": "Module 3",
+                "title": "Next.js Core Concepts",
+                "topics": [
+                    "App Router",
+                    "Layouts",
+                    "Dynamic Routes",
+                    "Server Components"
+                ]
+            },
+            {
+                "module": "Module 4",
+                "title": "Backend & Database",
+                "topics": [
+                    "API Routes",
+                    "Authentication",
+                    "MongoDB",
+                    "Prisma"
+                ]
+            },
+            {
+                "module": "Module 5",
+                "title": "AI Integration",
+                "topics": [
+                    "OpenAI APIs",
+                    "AI Chatbots",
+                    "Content Generation",
+                    "Automation"
+                ]
+            },
+            {
+                "module": "Module 6",
+                "title": "Deployment & Production",
+                "topics": [
+                    "Vercel",
+                    "SEO",
+                    "Performance Optimization",
+                    "CI/CD"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "4",
+        "title": "High Code AI",
+        "description": "Build production-ready modern web applications using Next.js, TypeScript, and AI tools.",
+        "duration": "4 Months",
+        "level": "Advanced",
+        "image": "/high-code-ai.jpeg",
+        "category": "AI Skill Development",
+        "slug": "high-code-ai",
+        "whatYouWillLearn": [
+            {
+                "heading": "Modern Frontend Development",
+                "detail": "Build fast and optimized applications using Next.js and React."
+            },
+            {
+                "heading": "Server Components & Rendering",
+                "detail": "Understand SSR, SSG, ISR, and React Server Components."
+            },
+            {
+                "heading": "TypeScript Integration",
+                "detail": "Write scalable and type-safe applications using TypeScript."
+            },
+            {
+                "heading": "Authentication & Database",
+                "detail": "Implement authentication systems and connect databases."
+            },
+            {
+                "heading": "AI Features in Applications",
+                "detail": "Integrate AI-powered chat, content generation, and automation features."
+            },
+            {
+                "heading": "Deployment & Optimization",
+                "detail": "Deploy applications with performance optimization and SEO best practices."
+            }
+        ],
+        "roadmap": [
+            {
+                "module": "Module 1",
+                "title": "Frontend Foundations",
+                "topics": [
+                    "HTML",
+                    "CSS",
+                    "JavaScript",
+                    "Responsive UI"
+                ]
+            },
+            {
+                "module": "Module 2",
+                "title": "React.js Essentials",
+                "topics": [
+                    "Components",
+                    "Hooks",
+                    "State",
+                    "API Handling"
+                ]
+            },
+            {
+                "module": "Module 3",
+                "title": "Next.js Core Concepts",
+                "topics": [
+                    "App Router",
+                    "Layouts",
+                    "Dynamic Routes",
+                    "Server Components"
+                ]
+            },
+            {
+                "module": "Module 4",
+                "title": "Backend & Database",
+                "topics": [
+                    "API Routes",
+                    "Authentication",
+                    "MongoDB",
+                    "Prisma"
+                ]
+            },
+            {
+                "module": "Module 5",
+                "title": "AI Integration",
+                "topics": [
+                    "OpenAI APIs",
+                    "AI Chatbots",
+                    "Content Generation",
+                    "Automation"
+                ]
+            },
+            {
+                "module": "Module 6",
+                "title": "Deployment & Production",
+                "topics": [
+                    "Vercel",
+                    "SEO",
+                    "Performance Optimization",
+                    "CI/CD"
+                ]
+            }
+        ]
     }
 ]

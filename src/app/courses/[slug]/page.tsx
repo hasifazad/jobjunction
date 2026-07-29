@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { courses, Course } from "@/app/courses/page";
+import { Course } from "@/app/courses/page";
+import courseData from '@/data/courses.json'
 import { notFound } from "next/navigation";
 import {
     Clock3,
@@ -9,6 +10,8 @@ import {
     CheckCircle2,
 } from "lucide-react";
 import Link from "next/link";
+
+const courses = courseData as Course[];
 
 export default function CourseDetailPage({
     params,
@@ -119,14 +122,7 @@ export default function CourseDetailPage({
                 </div>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {[
-                        "Server Side Rendering (SSR)",
-                        "Next.js App Router",
-                        "TypeScript Fundamentals",
-                        "Reusable Component Architecture",
-                        "API Integration",
-                        "Performance Optimization",
-                    ].map((item, index) => (
+                    {course.whatYouWillLearn.map((item, index) => (
                         <div
                             key={index}
                             className="group bg-white border border-gray-200 hover:border-[#FFD000] rounded-3xl p-6 transition-all duration-300 hover:shadow-xl"
@@ -136,12 +132,11 @@ export default function CourseDetailPage({
                             </div>
 
                             <h3 className="font-bold text-lg mb-2">
-                                {item}
+                                {item.heading}
                             </h3>
 
                             <p className="text-gray-600 text-sm leading-relaxed">
-                                Learn modern development techniques with
-                                real-world project implementation.
+                                {item.detail}
                             </p>
                         </div>
                     ))}

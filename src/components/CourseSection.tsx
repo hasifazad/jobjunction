@@ -56,10 +56,12 @@ export default function CourseSection({ title, courses }: Props) {
             </h2>
 
             <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                {courses.map((course) => (
-                    <Link href={`/courses/${course?.slug}`}>
-                        <CourseCard key={course.id} course={course} />
-                    </Link>
+                {courses.map((course,i) => (
+                    <div key={i}>
+                        <Link href={`/courses/${course?.slug}`}>
+                            <CourseCard key={course.id} course={course} />
+                        </Link>
+                    </div>
                 ))}
             </div>
         </section>

@@ -17,14 +17,14 @@ export default function ContactForm() {
 
     const [status, setStatus] = useState("");
 
-    const handleChange = (e:any) => {
+    const handleChange = (e: any) => {
         setFormData({
             ...formData,
             [e.target.name]: e.target.value
         });
     };
 
-    const handleSubmit = async (e:any) => {
+    const handleSubmit = async (e: any) => {
         e.preventDefault();
         const scriptURL = '/api/contact'
         try {
@@ -156,8 +156,9 @@ export default function ContactForm() {
                     {/* Right Side - Map */}
                     <div className="bg-white overflow-hidden h-full min-h-[500px] lg:sticky lg:top-8 relative">
                         <div className="h-full border border-gray-300">
+
                             <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3944.7717566853275!2d76.85274847455334!3d8.61789829528955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05c1bb5757dd53%3A0x8886ef46672815b0!2sKabani%20Technocity!5e0!3m2!1sen!2sin!4v1760442796559!5m2!1sen!2sin"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3611.59373427117!2d76.93662207455273!3d8.545419696372047!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05b94060a978db%3A0xd59b51c3c90df78c!2sJayamatha%20Private%20ITI!5e1!3m2!1sen!2sin!4v1782278765352!5m2!1sen!2sin"
                                 width="100%"
                                 height="100%"
                                 style={{ border: 0, minHeight: '500px' }}

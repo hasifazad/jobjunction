@@ -1,4 +1,18 @@
 // app/courses/page.tsx
+
+import coursesData from "@/data/courses.json";
+
+interface WhatYouWillLearnItem {
+    heading: string;
+    detail: string;
+}
+
+interface RoadmapModule {
+    module: string;
+    title: string;
+    topics: string[];
+}
+
 export interface Course {
     id: string;
     title: string;
@@ -8,40 +22,15 @@ export interface Course {
     image: string;
     category: string;
     slug: string;
+
+    whatYouWillLearn: WhatYouWillLearnItem[];
+
+    roadmap: RoadmapModule[];
 }
 
-export const courses: Course[] = [
-    {
-        id: "1",
-        title: "MERN Stack Development",
-        description: "Build full-stack applications using MongoDB, Express, React, and Node.",
-        duration: "3 Months",
-        level: "Intermediate",
-        image: "/mernstack.jpg",
-        category: "Web Development",
-        slug: "mern-stack-development"
-    },
-    {
-        id: "2",
-        title: "Next.js & TypeScript",
-        description: "Master SSR and modern frontend architecture.",
-        duration: "2 Months",
-        level: "Advanced",
-        image: "/nextjs.png",
-        category: "Frontend",
-        slug: "nextjs-development"
-    },
-    {
-        id: "3",
-        title: "Python Django",
-        description: "Backend development with Python and Django framework.",
-        duration: "3 Months",
-        level: "Beginner",
-        image: "/python-django.png",
-        category: "Backend",
-        slug: "python-full-stack-development"
-    },
-];
+const courses = coursesData as Course[];
+
+
 import CourseSection from "@/components/CourseSection";
 import Link from "next/link";
 
@@ -53,9 +42,6 @@ export default async function CoursesPage() {
 
     return (
         <main className="px-6 md:px-12 lg:px-36 py-10 bg-[var(--background)]">
-
-            View Details
-
             {/* Hero Section */}
             <div className="mb-12">
                 <h1 className="text-4xl font-bold text-[var(--foreground)] mb-4">
@@ -67,13 +53,13 @@ export default async function CoursesPage() {
             </div>
             {/* Dynamic Sections */}
             {categories.map((category) => (
-                
-                    <CourseSection
-                        key={category}
-                        title={category}
-                        courses={allCourses.filter(c => c)}
-                    />
-                
+
+                <CourseSection
+                    key={category}
+                    title={category}
+                    courses={allCourses.filter(c => c.category == category)}
+                />
+
             ))}
         </main>
     );
