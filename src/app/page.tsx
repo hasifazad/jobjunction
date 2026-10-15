@@ -12,7 +12,7 @@ export default function Home() {
 
       <main className="flex items-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <div className="flex flex-col md:flex-row md:justify-between py-5 md:py-6 gap-10">
+          <div className="flex flex-col md:flex-row md:justify-between gap-10">
 
             {/* Left Section: Text */}
             

@@ -25,7 +25,7 @@ export async function GET(req: Request) {
     next: { revalidate: 60 } // ISR cache
   });
 
-  const data = await res.json();
+  const data = await res.json();  
 
   return NextResponse.json(data);
 }

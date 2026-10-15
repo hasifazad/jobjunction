@@ -4,6 +4,7 @@ interface Blog {
     id: string;
     slug: string;
     topic: string;
+    content_slice: string;
     image_url: string;
     content: string;
 }
@@ -16,6 +17,7 @@ async function getBlogs(): Promise<Blog[]> {
     const res = await fetch(`${API_URL}/blogs`, {
         next: { revalidate: 30 }, // 🔥 ISR: Revalidate every 30 seconds
     });
+
 
     if (!res.ok) {
         throw new Error("Failed to fetch blogs");
@@ -47,10 +49,9 @@ export default async function BlogsPage() {
                             {blog.topic}
                         </h2>
                         <p className="text-gray-700 mt-2">
-                            {blog.content.slice(0, 120)}...
+                            {blog?.content_slice?.slice(0, 130)}...
                         </p>
 
-                        <p>{typeof blog.image_url}</p>
                     </Link>
                 ))}
             </div>

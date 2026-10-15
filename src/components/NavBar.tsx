@@ -1,9 +1,10 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+import { ArrowRight, Menu, X } from "lucide-react";
 
 import Image from "next/image";
+import { EnquiryButton } from "./EnquiryModal";
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -29,26 +30,34 @@ export default function Navbar() {
 
 
                     {/* Desktop Menu */}
-                    <div className="hidden md:flex space-x-8 items-center">
-                        <Link href="/" className="text-black hover:text-[var(--primary-yellow)]">
+                    <nav className="hidden items-center gap-8 text-sm font-medium text-slate-600 md:flex">
+                        <Link href="/" className="text-indigo-600">
                             Home
                         </Link>
-                        <Link href="/about" className="text-black hover:text-[var(--primary-yellow)]">
-                            About
-                        </Link>
-                        {/* <Link href="/courses" className="text-black hover:text-[var(--primary-yellow)]">
+                        <Link href="/courses" className="transition hover:text-indigo-600">
                             Courses
-                        </Link> */}
-                        <Link href="/blogs" className="text-black hover:text-[var(--primary-yellow)]">
+                        </Link>
+                        <Link href="/about" className="transition hover:text-indigo-600">
+                            About Us
+                        </Link>
+                        <Link
+                            href="/blogs"
+                            className="transition hover:text-indigo-600"
+                        >
                             Blogs
                         </Link>
-                        <Link href="/courses" className="text-black hover:text-[var(--primary-yellow)]">
-                            Courses
+                        <Link href="/#contact" className="transition hover:text-indigo-600">
+                            Contact
                         </Link>
-                        {/* <button className="rounded-xl bg-[var(--primary-yellow)] px-5 py-2 w-full cursor-pointer hover:bg-amber-400">
-                            Enroll Now
-                        </button> */}
-                    </div>
+                    </nav>
+
+                    <EnquiryButton />
+                    {/* <Link
+                        href="/contact"
+                        className="hidden items-center gap-2 rounded-full bg-indigo-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-indigo-700 sm:flex"
+                    >
+                        Enquire Now <ArrowRight size={17} />
+                    </Link> */}
 
                     {/* Mobile Menu Button */}
                     <button

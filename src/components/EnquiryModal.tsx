@@ -1,5 +1,6 @@
 "use client";
 
+import { ArrowRight } from "lucide-react";
 import { useState } from "react";
 
 type Props = {
@@ -15,6 +16,8 @@ export default function EnquiryModal({ isOpen, onClose }: Props) {
         message: "",
     });
 
+    let [loading, setLoading] = useState(false)
+
     const handleChange = (
         e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
     ) => {
@@ -24,7 +27,7 @@ export default function EnquiryModal({ isOpen, onClose }: Props) {
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
 
-        e.preventDefault();
+        setLoading(true)
         const scriptURL = '/api/contact'
         try {
             const res = await fetch(scriptURL, {
@@ -40,6 +43,8 @@ export default function EnquiryModal({ isOpen, onClose }: Props) {
         } catch (err) {
             console.error(err);
             // setStatus("Something went wrong. Please try again.");
+        } finally {
+            setLoading(false)
         }
 
         onClose();
@@ -109,10 +114,22 @@ export default function EnquiryModal({ isOpen, onClose }: Props) {
 
                     {/* Submit */}
                     <button
+                        disabled={loading}
                         type="submit"
-                        className="w-full py-2.5 text-sm font-medium text-white rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 shadow-md hover:shadow-lg hover:scale-[1.01] transition-all"
+                        className="w-full py-2.5 text-sm font-medium text-white rounded-xl
+    bg-gradient-to-r from-blue-600 to-indigo-600 shadow-md
+    hover:shadow-lg hover:scale-[1.01] transition-all
+    disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:scale-100
+    flex items-center justify-center gap-2"
                     >
-                        Submit Enquiry
+                        {loading ? (
+                            <>
+                                <span className="w-4 h-4 border-2 border-white/40 border-t-white rounded-full animate-spin" />
+                                Submitting...
+                            </>
+                        ) : (
+                            "Submit Enquiry"
+                        )}
                     </button>
                 </form>
             </div>
@@ -129,9 +146,9 @@ export function EnquiryButton() {
         <div>
             <button
                 onClick={() => setOpen(true)}
-                className="w-full p-4 px-5 text-lg font-medium text-white rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 shadow-md hover:shadow-lg hover:scale-[1.1] transition-all cursor-pointer"
+                className="hidden items-center gap-2 rounded-full bg-indigo-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-indigo-700 sm:flex"
             >
-                Book a Free Enquiry Now
+                Book a Free Enquiry Now <ArrowRight size={17} />
             </button>
 
             <EnquiryModal isOpen={open} onClose={() => setOpen(false)} />

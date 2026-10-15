@@ -15,6 +15,8 @@ export default function ContactForm() {
         message: ''
     });
 
+    let [loading, setLoading] = useState(false)
+
     const [status, setStatus] = useState("");
 
     const handleChange = (e: any) => {
@@ -26,6 +28,7 @@ export default function ContactForm() {
 
     const handleSubmit = async (e: any) => {
         e.preventDefault();
+        setLoading(true)
         const scriptURL = '/api/contact'
         try {
             const res = await fetch(scriptURL, {
@@ -41,6 +44,8 @@ export default function ContactForm() {
         } catch (err) {
             console.error(err);
             setStatus("Something went wrong. Please try again.");
+        } finally {
+            setLoading(false)
         }
 
     };
@@ -142,10 +147,21 @@ export default function ContactForm() {
                             {/* Submit Button */}
                             <button
                                 onClick={handleSubmit}
-                                // type='submit'
-                                className="w-full bg-[var(--primary-yellow)] text-gray-900 font-bold py-4 px-8 rounded-lg hover:bg-yellow-500 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+                                disabled={loading}
+                                type="button"
+                                className="w-full bg-[var(--primary-yellow)] text-gray-900 font-bold py-4 px-8 rounded-lg
+    hover:bg-yellow-500 transform hover:scale-105 transition-all duration-300
+    shadow-lg hover:shadow-xl disabled:opacity-70 disabled:cursor-not-allowed
+    disabled:hover:scale-100 flex items-center justify-center gap-2"
                             >
-                                Send Message
+                                {loading ? (
+                                    <>
+                                        <span className="w-5 h-5 border-2 border-gray-900/30 border-t-gray-900 rounded-full animate-spin" />
+                                        Sending Message...
+                                    </>
+                                ) : (
+                                    "Send Message"
+                                )}
                             </button>
                         </div>
 

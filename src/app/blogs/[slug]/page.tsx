@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import Link from "next/link";
+import remarkGfm from "remark-gfm";
+import ReactMarkdown from "react-markdown";
 
 interface Blog {
     slug: string;
@@ -18,7 +20,7 @@ async function getBlog(slug: string): Promise<Blog | null> {
         const res = await fetch(
             `${API_URL}/blogs?slug=${slug}`,
             {
-                next: { revalidate: 300 }, // ISR (5 minutes)
+                next: { revalidate: 30 }, // ISR (5 minutes)
             }
         );
 
@@ -52,10 +54,15 @@ export default async function BlogPage({
                 alt={blog.topic}
                 className="w-full h-64 object-cover rounded-xl mb-6"
             />
-            <h1 className="text-3xl font-bold mb-4">{blog.topic}</h1>
-            <p className="text-gray-700 whitespace-pre-wrap leading-relaxed">
+            {/* <h1 className="text-3xl font-bold mb-4">{blog.topic}</h1> */}
+            <article className="blog-content">
+                <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                    {blog.content}
+                </ReactMarkdown>
+            </article>
+            {/* <p className="text-gray-700 whitespace-pre-wrap leading-relaxed">
                 {blog.content}
-            </p>
+            </p> */}
         </div>
     );
 }
