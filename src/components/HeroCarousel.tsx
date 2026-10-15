@@ -13,6 +13,7 @@ import {
     Sparkles,
     Menu,
 } from "lucide-react";
+import { EnquiryButton } from "./EnquiryModal";
 
 const features = [
     {
@@ -170,22 +171,17 @@ export default function HeroSection() {
                     </p>
 
                     <div className="mt-9 flex flex-col justify-center gap-3 sm:flex-row lg:justify-start">
+                        <EnquiryButton />
+
                         <Link
                             href="/courses"
-                            className="group inline-flex items-center justify-center gap-3 rounded-full bg-indigo-600 px-7 py-4 font-semibold text-white shadow-lg shadow-indigo-200 transition hover:-translate-y-0.5 hover:bg-indigo-700"
+                            className="inline-flex items-center justify-center gap-2 rounded-full border border-slate-300 bg-white px-7 py-4 font-semibold text-slate-700 transition hover:border-indigo-300 hover:bg-indigo-50"
                         >
                             Explore Courses
                             <ArrowRight
                                 size={19}
                                 className="transition-transform group-hover:translate-x-1"
                             />
-                        </Link>
-
-                        <Link
-                            href="/#contact"
-                            className="inline-flex items-center justify-center gap-2 rounded-full border border-slate-300 bg-white px-7 py-4 font-semibold text-slate-700 transition hover:border-indigo-300 hover:bg-indigo-50"
-                        >
-                            Talk to an Advisor
                         </Link>
                     </div>
 
