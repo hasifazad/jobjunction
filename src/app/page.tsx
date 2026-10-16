@@ -4,6 +4,7 @@ import Image from "next/image";
 
 import { EnquiryButton } from "@/components/EnquiryModal";
 import HeroCarousel from "@/components/HeroCarousel";
+import PhilosophyPage from "./philosophy/page";
 
 export default function Home() {
   return (
@@ -15,8 +16,8 @@ export default function Home() {
           <div className="flex flex-col md:flex-row md:justify-between gap-10">
 
             {/* Left Section: Text */}
-            
-           
+
+
 
             {/* Right Section: Hero Image */}
             {/* <div className="flex-1 shadow-2xl">
@@ -38,9 +39,11 @@ export default function Home() {
         </div>
       </main>
 
-      <section id="trust-section" className="py-20 px-4 sm:px-6 lg:px-8 bg-yellow-50">
+      <PhilosophyPage />
+
+      {/* <section id="trust-section" className="py-20 px-4 sm:px-6 lg:px-8 bg-yellow-50">
         <div className="max-w-7xl mx-auto">
-          {/* Header */}
+          
           <div className="text-center mb-16">
             <h2 className="text-4xl sm:text-5xl lg:text-6xl text-gray-900 leading-tight mb-4">
               Why Students{' '}
@@ -52,9 +55,9 @@ export default function Home() {
 
           </div>
 
-          {/* Cards Grid */}
+          
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
-            {/* Card 1 */}
+            
             <div className="group bg-white p-8 shadow-lg hover:-translate-y-2 transition-all duration-300 relative overflow-hidden before:absolute before:top-0 before:left-0 before:w-full before:h-1 before:bg-gradient-to-r before:from-yellow-400 before:to-yellow-300 before:scale-x-0 hover:before:scale-x-100 before:transition-transform before:duration-300 before:origin-left">
               <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-300 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -69,7 +72,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Card 2 */}
+           
             <div className="group bg-white p-8 shadow-lg hover:-translate-y-2 transition-all duration-300 relative overflow-hidden before:absolute before:top-0 before:left-0 before:w-full before:h-1 before:bg-gradient-to-r before:from-yellow-400 before:to-yellow-300 before:scale-x-0 hover:before:scale-x-100 before:transition-transform before:duration-300 before:origin-left">
               <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-300 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -83,7 +86,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Card 3 */}
+           
             <div className="group bg-white p-8 shadow-lg hover:-translate-y-2 transition-all duration-300 relative overflow-hidden md:col-span-2 lg:col-span-1 before:absolute before:top-0 before:left-0 before:w-full before:h-1 before:bg-gradient-to-r before:from-yellow-400 before:to-yellow-300 before:scale-x-0 hover:before:scale-x-100 before:transition-transform before:duration-300 before:origin-left">
               <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-300 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -98,7 +101,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
 
       <ContactForm />

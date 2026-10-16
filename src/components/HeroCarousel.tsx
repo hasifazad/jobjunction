@@ -155,19 +155,17 @@ export default function HeroSection() {
                     </div>
 
                     <h1 className="text-4xl font-bold leading-[1.12] tracking-tight sm:text-5xl md:text-6xl xl:text-[68px]">
-                        Build Skills for
+                        Don't Just Learn.
                         <span className="mt-1 block">
-                            a{" "}
+
                             <span className="bg-gradient-to-r from-indigo-600 via-blue-600 to-sky-500 bg-clip-text text-transparent">
-                                Better Tomorrow.
+                                Build with AI.
                             </span>
                         </span>
                     </h1>
 
                     <p className="mx-auto mt-7 max-w-xl text-base leading-8 text-slate-600 sm:text-lg lg:mx-0">
-                        Learn industry-relevant IT and AI skills through practical
-                        training, real-world projects, and expert mentorship.
-                        Turn your ambition into a career you love.
+                        AI is changing what we can do. What matters is what you choose to do with it. Learn the fundamentals, question the obvious, and build things that go beyond following someone else's steps.
                     </p>
 
                     <div className="mt-9 flex flex-col justify-center gap-3 sm:flex-row lg:justify-start">
